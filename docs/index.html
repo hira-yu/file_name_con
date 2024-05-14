@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head prefix="og: http://ogp.me/ns">
+    <meta charset="utf-8">
+    <title>命名規則確認ツール</title>
+    <meta name="description" content="提出課題の命名規則が合致しているか確認できます．" />
+    <meta property="og:url" content="https://hira-yu.github.io/file_name_con/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="命名規則確認ツール" />
+    <meta property="og:site_name" content="命名規則確認ツール" />
+    <meta property="og:description" content="提出課題の命名規則が合致しているか確認できます．" />
+    <meta property="og:image" content="https://hira-yu.github.io/file_name_con/image/ogpimg.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./css/index.css?ver=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+        <h1>命名規則確認ツール<br>~ソフトウェア開発基礎~</h1>
+        <p>使い方：対象の課題を選択しファイルをアップロードするだけです<br>※このページで入力された情報が外部送信されることはありません．</p>
+    </header>
+    <main>
+        <div>
+            <div id="task_box">
+                <select name="task_name" id="task_name">
+                    <option value="01">課題No,01. プログラミング前の頭体操1</option>
+                    <option value="02">課題No,02. プログラミング前の頭体操2</option>
+                    <option value="03" selected>課題No,03. diagramsを用いたフローチャート1</option>
+                </select>
+            </div>
+            <div id="file_box">
+                <input type="file" name="file_input" id="file_input" multiple><label for="file_input" id="file_input_label">ファイルをアップロード</label>
+            </div>
+        </div>
+        <div id="result_box">
+            <h2>検証結果</h2>
+        </div>
+    </main>
+    <footer>
+        <small>©Copyright 2024, hira-yu, All rights rserved.</small>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>
