@@ -64,7 +64,7 @@ function check(files) {
 
             var temp = files[i].split("_");
 
-            if (file_ext[file_ext.length - 1] == "png" && temp.length == 3 && temp[0] == "課題No,03" && !files[i].includes(' ') && !files[i].includes('　') && /問題0[1-9]/.test(temp[1])) {
+            if (file_ext[file_ext.length - 1] == "png" && !files[i].includes('drawio') && temp.length == 3 && temp[0] == "課題No,03" && !files[i].includes(' ') && !files[i].includes('　') && /問題0[1-9]/.test(temp[1])) {
                 result = result_true;
             } else {
                 result = result_false;
@@ -79,7 +79,7 @@ function check(files) {
 
             var temp = files[i].split("_");
 
-            if (file_ext[file_ext.length - 1] == "png" && temp.length == 3 && temp[0] == "課題No,04" && !files[i].includes(' ') && !files[i].includes('　') && /問題0[1-5]/.test(temp[1])) {
+            if (file_ext[file_ext.length - 1] == "png" && !files[i].includes('drawio') && temp.length == 3 && temp[0] == "課題No,04" && !files[i].includes(' ') && !files[i].includes('　') && /問題0[1-5]/.test(temp[1])) {
                 result = result_true;
             } else {
                 result = result_false;
