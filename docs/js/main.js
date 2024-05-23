@@ -13,7 +13,18 @@ $("#file_input").change(function() {
 
     // 命名規則チェック関数へ
     check(files);
-})
+});
+
+/* D&D対応関係 */
+$("#input_area").on("drop", function() {
+	this.style.backgroundColor = '';
+});
+$('#input_area').on('dragover', function () {
+	this.style.backgroundColor = '#82beef';
+});
+$('#input_area').on('dragleave', function () {
+	this.style.backgroundColor = '';
+});
 
 /* 命名規則チェック関数 */
 function check(files) {
