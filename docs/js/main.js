@@ -99,6 +99,20 @@ function check(files) {
             elem = `<div class="result_item"><div>No.${i + 1}</div><div><div>命名規則 : ${sample_name}<br>検証対象 : ${files[i]}<br>検証結果 : ${result}</div></div></div>`;
         }
 
+        // 課題5
+        if (task_num == "05") {
+            var sample_name = "課題No,05_問題03_苗字名前.cpp";
+
+            var temp = files[i].split("_");
+
+            if (file_ext[file_ext.length - 1] == "cpp" && temp.length == 3 && temp[0] == "課題No,05" && !files[i].includes(' ') && !files[i].includes('　') && /問題0[3-5]/.test(temp[1])) {
+                result = result_true;
+            } else {
+                result = result_false;
+            }
+
+            elem = `<div class="result_item"><div>No.${i + 1}</div><div><div>命名規則 : ${sample_name}<br>検証対象 : ${files[i]}<br>検証結果 : ${result}</div></div></div>`;
+        }
         document.querySelector("#result_box").insertAdjacentHTML("beforeend", elem);
     }
     $("#result_box").show();
