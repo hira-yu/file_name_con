@@ -159,6 +159,21 @@ function check(files) {
             elem = `<div class="result_item"><div>No.${i + 1}</div><div><div>命名規則 : ${sample_name}<br>検証対象 : ${files[i]}<br>検証結果 : ${result}</div></div></div>`;
         }
 
+        // 課題9
+        if (task_num == "09") {
+            var sample_name = "課題No,09_マスターマインド_OK999999_苗字名前.cpp";
+
+            var temp = files[i].split("_");
+
+            if (file_ext[file_ext.length - 1] == "cpp" && temp.length == 4 && temp[0] == "課題No,09" && !files[i].includes(' ') && !files[i].includes('　') && temp[1] == "マスターマインド" && /OK[0-9][0-9][0-9][0-9][0-9][0-9]/.test(temp[2])) {
+                result = result_true;
+            } else {
+                result = result_false;
+            }
+
+            elem = `<div class="result_item"><div>No.${i + 1}</div><div><div>命名規則 : ${sample_name}<br>検証対象 : ${files[i]}<br>検証結果 : ${result}</div></div></div>`;
+        }
+
         document.querySelector("#result_box").insertAdjacentHTML("beforeend", elem);
     }
     $("#result_box").show();
